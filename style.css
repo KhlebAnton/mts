@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'MTS Text';
+    src: url("fonts/MTSCompact-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #00000000;
+    font-family: 'MTS Text';
+    color: #FFF;
+}
+.hidden {
+    visibility: hidden;
+    touch-action: none;
+}
+.screen {
+    height: 100%;
+    background: url("img/bg.png") 50% / cover no-repeat;
+    padding-top: 20px;
+}
+.header {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 130px;
+    height: 41.914px;
+    background: url("img/logo.png") 50% / cover no-repeat;
+}
+.info {
+    width: 60px;
+    height: 60px;
+    background: url("img/info.svg") 50% / cover no-repeat;
+}
+.info.active_info {
+    background: url("img/info_active_menu.svg") 50% / cover no-repeat;
+}
+
+.footer_menu {
+    min-width: 297px;
+    height: 75px;
+    border-radius: 49px;
+    background: rgba(144, 144, 144, 0.30);
+
+    backdrop-filter: blur(4.5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: fixed;
+    bottom: 38px;
+    left: calc(50% - (297px / 2));
+}
+.shot{
+    width: 77px;
+    height: 77px;
+    background: url('img/camera.svg') 50% 50% / 42px 35px no-repeat;
+}
+.animation{
+    width: 77px;
+    height: 77px;
+    background: url('img/smile.svg') 50% 50% / 44px 44px no-repeat;
+}
+.animation.active_menu {
+    background: url('img/smile_active_menu.svg') 50% 50% / 44px 44px no-repeat;
+}
+.mining{
+    width: 77px;
+    height: 77px;
+    background: url('img/minig.svg') 50% 50%  no-repeat;
+}
+.animation_menu {
+    width: 317px;
+    height: 115px;
+    background: url("img/anim_menu_bg.png") 50% / cover no-repeat;
+    position: fixed;
+    bottom: 120px;
+    left: calc(50% - (317px / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.anim_hello {
+    width: 82.365px;
+    height: 82.365px;
+    background: url("img/anim_hello.svg") 50%  / cover no-repeat;
+}
+.anim_smile {
+    width: 82.365px;
+    height: 82.365px;
+    background: url("img/anim_smile.svg") 50% / cover no-repeat;
+}
+.anim_dance {
+    width: 82.365px;
+    height: 82.365px;
+    background: url("img/anim_dance.svg") 50% / cover no-repeat;
+}
+
+.info_menu {
+    font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; 
+color: #FFF;
+
+padding-top: 34px;
+width: 353px;
+height: 222px;
+background: url('img/info_menu_bg.png') 50% / cover no-repeat;
+position: fixed;
+left: calc(50% - (353px / 2));
+top: 100px;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+.info_item {
+    display: flex;
+    align-items: center;
+    width: 289px;
+    justify-content: space-evenly;
+}
+.info_item:first-child {
+    align-items: start;
+    
+}
+
+.info_shot {
+    width: 38.109px;
+    height: 38.228px;
+    background: url('img/camera.svg') 50% 50% / 21px 18px  no-repeat;
+}
+.info_animation {
+    width: 38.109px;
+    height: 38.228px;
+    background: url('img/smile.svg') 50% 50% / 21px 21px  no-repeat;
+}
+.info_mining {
+    width: 38.109px;
+    height: 38.228px;
+    background: url('img/minig.svg') 50% 50% / cover  no-repeat;
+}
+.btn_close_info {
+    width: 40px;
+    height: 40px;
+    background: url("img/close.svg");
+    position: absolute;
+    top: 17px;
+    right: 14px;
+}
+.photo_wrapper{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.photo {
+    height: 72%;
+    background: url('img/photo_container.png') 50% / 100% 100% no-repeat;
+}
+.menu_photo {
+    height: 27%;
+    background: url('img/photo_menu.png') 50% / 100% 100% no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_close_photo {
+    width: 40px;
+    height: 40px;
+    background: url("img/close.svg");
+    position: absolute;
+    top: 17px;
+    right: 14px;
+}
+
+.btn_photo {
+    width: 125px;
+    height: 125px;
+    background: url('img/btn_photo_menu.png') 50% / 100% 100% no-repeat;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn_again {
+    width: 77px;
+    height: 77px;
+    background: url('img/btn_again.png') 50% / 100% 100% no-repeat;
+}
+
+.btn_share {
+    width: 77px;
+    height: 77px;
+    background: url('img/Share.svg') 50% 50% / 32px 40px no-repeat;
+}
