@@ -34,7 +34,7 @@ body {
 .logo {
     width: 130px;
     height: 41.914px;
-    background: url("img/logo.png") 50% / cover no-repeat;
+    background: url("img/logo.svg") 50% / cover no-repeat;
 }
 .info {
     width: 60px;
