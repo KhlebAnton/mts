@@ -162,6 +162,7 @@ justify-content: space-evenly;
     right: 14px;
 }
 .photo_wrapper{
+    position: relative;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -169,6 +170,18 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+    
+}
+.photo_wrapper::before{
+    position: absolute;
+    background-color: #FF0032;
+    top: -10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    content: '';
 }
 .photo {
     height: 72%;
@@ -189,6 +202,14 @@ justify-content: space-evenly;
     position: absolute;
     top: 17px;
     right: 14px;
+}
+.photo_logo {
+    width: 130px;
+    height: 40px;
+    background: url("img/logo.svg");
+    position: absolute;
+    top: 17px;
+    left: 14px;
 }
 
 .btn_photo {
