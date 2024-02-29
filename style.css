@@ -30,6 +30,9 @@ body {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: calc(50% - (85% / 2));
+    
 }
 .logo {
     width: 130px;
