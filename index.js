@@ -83,6 +83,7 @@ window.addEventListener('message', (msg) => {
         //$(".btn_start_game.animated").addClass("go")
         let progress = Math.round((msg.split(" ")[1]));
         console.log("onContentLoading " + progress)
+        setProgress(progress)
         //showLoadingProgress(progress)
         //percentElement.innerText = progress + '%';
     }
@@ -91,6 +92,14 @@ window.addEventListener('message', (msg) => {
         let data = msg.split("PhotoDone ")[1];
         $(".photo_wrapper").removeClass("hidden");
         $("#screenData").attr("src", data);
+    }
+    if (msg.includes("showLoading")) {
+        console.log("showLoader")
+        showLoader()
+    }
+    if (msg.includes("hideLoading")) {
+        console.log("hideLoader")
+        hideLoader()
     }
 });
 
@@ -159,6 +168,10 @@ $(function() {
             }
         })
     }
+    document.body.addEventListener("click", printMousePos);
+    function printMousePos(event) {
+        sendMessageToApp('screenClick ' + event.clientX + ' ' + event.clientY);
+    }
 
     function updateStickPosition(pageX, pageY) {
         var x = pageX - container.offset().left;
@@ -178,8 +191,8 @@ $(function() {
         // Нормализация значений от -1 до 1 для вывода
         var normalizedX = dx / (joystickRadius - stickRadius);
         var normalizedY = dy / (joystickRadius - stickRadius)
-        if(getOS() == "Desktop")
-            normalizedY = normalizedY * (-1);
+        //if(getOS() == "Desktop")
+          //  normalizedY = normalizedY * (-1);
         sendMessageToApp('AxeX ' + normalizedX.toFixed(2) + ' AxeY ' + normalizedY.toFixed(2));
     }
 });

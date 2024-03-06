@@ -272,7 +272,7 @@ justify-content: space-evenly;
 
 
 .loader_screen {
-    background: url(img/background.png) 50% / cover no-repeat;
+    background: url(img/background.jpg) 50% / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
