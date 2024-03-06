@@ -178,8 +178,8 @@ $(function() {
         // Нормализация значений от -1 до 1 для вывода
         var normalizedX = dx / (joystickRadius - stickRadius);
         var normalizedY = dy / (joystickRadius - stickRadius)
-        if(getOS() == "Desktop")
-            normalizedY = normalizedY * (-1);
+        //if(getOS() == "Desktop")
+          //  normalizedY = normalizedY * (-1);
         sendMessageToApp('AxeX ' + normalizedX.toFixed(2) + ' AxeY ' + normalizedY.toFixed(2));
     }
 });
