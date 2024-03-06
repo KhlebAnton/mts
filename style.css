@@ -2,6 +2,11 @@
     font-family: 'MTS Text';
     src: url("fonts/MTSCompact-Regular.ttf");
 }
+@font-face {
+    font-family: "MTS Wide";
+    src: url('fonts/MTSWide-Bold.ttf');
+    font-weight: 500;
+}
 
 * {
     margin: 0;
@@ -261,4 +266,187 @@ justify-content: space-evenly;
     margin-left: -30px;
     margin-top: -30px;
     pointer-events: none; /* Игнорировать события мыши на стике */
+}
+
+
+
+
+.loader_screen {
+    background: url(img/background.png) 50% / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+}
+.loader_screen.hidden {
+    display: none;
+
+}
+.line {
+    width: 5px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    bottom: 100%;
+}
+
+@keyframes liner {
+    from {
+        bottom: -50% ;
+    }
+    to {
+        bottom: 100%;
+    }
+}
+
+.line_1 {
+    height: 234px;
+    left: 10%;
+    animation: liner 3s linear infinite;
+    -webkit-animation: liner 3s linear infinite;
+    -moz-animation: liner 3s linear infinite;
+}
+.line_2 {
+    height: 53px;
+    left: 25%;
+    animation: liner 2.5s linear infinite;
+    -webkit-animation: liner 2.5s linear infinite;
+    -moz-animation: liner 2.5s linear infinite;
+}
+.line_3 {
+    height: 168px;
+    left: 50%;
+    animation: liner 2.5s linear infinite;
+    -webkit-animation: liner 2.5s linear infinite;
+    -moz-animation: liner 2.5s linear infinite;
+}
+.line_4 {
+    height: 53px;
+    left: 75%;
+    animation: liner 3s  linear infinite;
+    -webkit-animation: liner 3s  linear infinite;
+    -moz-animation: liner 3s  linear infinite;
+}
+.line_5 {
+    height: 173px;
+    left: 90%;
+    animation: liner 3s  linear infinite;
+    -webkit-animation: liner 3s  linear infinite;
+    -moz-animation: liner 3s  linear infinite;
+}
+
+.line_6 {
+    height: 234px;
+    left: 15%;
+    animation: liner 3s 1.5s linear infinite;
+    -webkit-animation: liner 3s 1.5s linear infinite;
+    -moz-animation: liner 3s 1.5s linear infinite;
+}
+.line_7 {
+    height: 53px;
+    left: 30%;
+    animation: liner 2.5s 1.25s linear infinite;
+    -webkit-animation: liner 2.5s 1.25s linear infinite;
+    -moz-animation: liner 2.5s 1.25s linear infinite;
+    z-index: 5;
+}
+.line_8 {
+    height: 168px;
+    left: 55%;
+    animation: liner 2.5s 1.25s linear infinite;
+    -webkit-animation: liner 2.5s 1.25s linear infinite;
+    -moz-animation: liner 2.5s 1.25s linear infinite;
+    z-index: 5;
+}
+.line_9 {
+    height: 53px;
+    left: 70%;
+    animation: liner 3s 1.5s linear infinite;
+    -webkit-animation: liner 3s 1.5s linear infinite;
+    -moz-animation: liner 3s 1.5s linear infinite;
+}
+.line_10 {
+    height: 173px;
+    left: 85%;
+    animation: liner 3s 1.5s linear infinite;
+    -webkit-animation: liner 3s 1.5s linear infinite;
+    -moz-animation: liner 3s 1.5s linear infinite;
+}
+
+.loader_screen .anim_logo {
+    width: 156.67px;
+    height: 180.77px;
+    
+
+    position: fixed;
+    left: calc(50% - (156.67px / 2));
+    /* top: calc(50% - (180.77px / 2)); */
+    bottom: 100%;
+
+    animation: anim_logo 6s;
+}
+.loader_screen .logo {
+    background: url(img/logo_mts.svg) 50% / cover no-repeat;
+    height: 156.67px;
+    width: auto;
+    
+}
+.loader_screen .logo_name {
+    background: url(img/VERSE.svg) 0% / cover no-repeat;
+    height: 19.58px;
+    margin-top: 4px;
+    width: 0;
+
+    
+}
+
+.loader_screen .logo_name.animated {
+    width: 100%;
+    animation: name_logo 0.5s linear;
+}
+#progress_time {
+    font-family: "MTS Wide";
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 200px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #FFFFFF;
+    transition: 0.5s;
+
+    
+
+}
+.loader_screen .head_logo {
+    width: 130px;
+    height: 41.91px;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background: url(img/head_logo.svg);
+    transition: 0.3s;
+
+}
+@keyframes name_logo {
+    from {
+        width: 0;
+    }
+    
+}
+
+@keyframes anim_logo {
+    0% {
+        bottom: 100%;
+    }
+    30% {
+        bottom: calc(50% - (180.77px / 2));
+    }
+    70% {
+        bottom: calc(50% - (180.77px / 2));
+    }
+    100% {
+        bottom: -50%;
+    }
 }

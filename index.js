@@ -212,3 +212,35 @@ function isIOS() {
 function isAndroid(){
     return /android/i.test(userAgent)
 }
+
+const logoName = document.getElementById('logo_name');
+const progressTime = document.getElementById('progress_time');
+const headLogo = document.getElementById('head_logo');
+const loaderScreen = document.getElementById('loader');
+//show loader 
+function showLoader() {
+    loaderScreen.classList.remove('hidden');
+    //анимация логотипа
+    setTimeout( () => {
+        logoName.classList.add('animated')
+    }, 2000 )
+    //появление таймера
+    setTimeout( () => {
+        progressTime.classList.remove('hidden');
+        headLogo.classList.remove('hidden');
+    }, 6000 )
+}
+//hide loader
+function hideLoader() {
+    loaderScreen.classList.add('hidden');
+    progressTime.classList.add('hidden');
+    headLogo.classList.add('hidden');
+    logoName.classList.remove('animated')
+    
+}
+
+//set progress
+function setProgress(int) {
+    progressTime.textContent = int;
+}
+
