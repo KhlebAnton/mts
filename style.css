@@ -5,6 +5,16 @@
 @font-face {
     font-family: "MTS Wide";
     src: url('fonts/MTSWide-Bold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: "MTS Wide";
+    src: url('fonts/MTSWide-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: "MTS Wide";
+    src: url('fonts/MTSWide-Medium.ttf');
     font-weight: 500;
 }
 
@@ -169,6 +179,14 @@ justify-content: space-evenly;
     top: 17px;
     right: 14px;
 }
+.btn_close_payment {
+    width: 40px;
+    height: 40px;
+    background: url("img/close.svg");
+    position: absolute;
+    top: 17px;
+    right: 14px;
+}
 .photo_wrapper{
     position: relative;
     height: 100%;
@@ -267,9 +285,50 @@ justify-content: space-evenly;
     margin-top: -30px;
     pointer-events: none; /* Игнорировать события мыши на стике */
 }
+.payment {
+    width: 353px;
+    height: 192px;
+    background: url(img/payment.png) 50% / cover no-repeat;
+    position: fixed;
+    top: 30%;
+    left: calc(50% - (353px / 2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.payment p {
+    font-size: 21px;
+    font-weight: 300;
+    font-family: "MTS Wide";
+line-height: 29px;
+letter-spacing: -0.04em;
+text-transform: uppercase;
 
 
+}
+.payment span {
+    font-family: "MTS Wide";
+font-size: 52px;
+font-weight: 500;
+line-height: 73px;
+letter-spacing: -0.04em;
+text-align: left;
+color: rgba(255, 0, 50, 1);
+position: relative;
 
+}
+
+.payment_false p {
+    font-family: "MTS Text";
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+text-transform: none;
+
+}
 
 .loader_screen {
     background: url(img/background.jpg) 50% / cover no-repeat;

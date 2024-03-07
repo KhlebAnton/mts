@@ -102,9 +102,24 @@ window.addEventListener('message', (msg) => {
         hideLoader()
     }
 });
-
-
-
+//payment screen
+const paymentTrue = document.querySelector('.payment_true');
+const paymentFalse = document.querySelector('.payment_false');
+const closeBtnPaymentList = document.querySelectorAll('.btn_close_payment');
+function showPayment(bool) {
+    if(bool) {
+        paymentTrue.classList.remove('hidden')
+    } else {
+        paymentFalse.classList.remove('hidden')
+    }
+}
+function hidePayment() {
+    paymentTrue.classList.add('hidden')
+    paymentFalse.classList.add('hidden')
+}
+closeBtnPaymentList.forEach(btn => {
+    btn.addEventListener('click', () => {hidePayment()})
+})
 //stick
 $(function() {
     var wasTouched = false;

@@ -81,7 +81,17 @@
             <div class="animation"></div>
             <div class="mining" onclick="sendMessageToApp('mining')"></div>
         </div>
-
+        <div class="payment payment_true hidden">
+            <p>Вам начислено</p>
+                <span>100 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5 0C9.22552 0 7.00211 0.674466 5.11094 1.9381C3.21978 3.20174 1.74579 4.99779 0.875387 7.09914C0.00497952 9.20049 -0.222754 11.5128 0.220975 13.7435C0.664705 15.9743 1.75998 18.0234 3.36828 19.6317C4.97658 21.24 7.02568 22.3353 9.25646 22.779C11.4872 23.2228 13.7995 22.995 15.9009 22.1246C18.0022 21.2542 19.7983 19.7802 21.0619 17.8891C22.3255 15.9979 23 13.7745 23 11.5C22.9986 8.45045 21.7865 5.5262 19.6302 3.36984C17.4738 1.21347 14.5496 0.00141347 11.5 0ZM17.1006 17.09H5.91002V5.89935H17.1006V17.09Z" fill="white"/>
+                    </svg></span>
+            <div class="btn_close_payment"></div>
+        </div>
+        <div class="payment payment_false hidden">
+            <p>Вы уже воспользовались<br> начислением коинов.<br> Возвращайтесь завтра. </p>
+            <div class="btn_close_payment"></div>
+        </div>
 
         <div class="photo_wrapper hidden">
             <div class="photo" style="text-align: center;">
