@@ -101,21 +101,34 @@ window.addEventListener('message', (msg) => {
         console.log("hideLoader")
         hideLoader()
     }
+    if (msg.includes("showPayment ")) {
+        showPayment((/true/).test(msg.split("showPayment ")[1]))
+    }
+    if (msg.includes("showError ")) {
+        showError(msg.split("showError ")[1])
+    }
 });
 //payment screen
 const paymentTrue = document.querySelector('.payment_true');
 const paymentFalse = document.querySelector('.payment_false');
 const closeBtnPaymentList = document.querySelectorAll('.btn_close_payment');
 function showPayment(bool) {
+    hidePayment()
     if(bool) {
         paymentTrue.classList.remove('hidden')
     } else {
+        $(".payment.payment_false p").html("Вы уже воспользовались<br> начислением коинов.<br> Возвращайтесь завтра. ");
         paymentFalse.classList.remove('hidden')
     }
 }
 function hidePayment() {
     paymentTrue.classList.add('hidden')
     paymentFalse.classList.add('hidden')
+}
+function showError(text){
+    hidePayment()
+    $(".payment.payment_false p").html(text);
+    paymentFalse.classList.remove('hidden')
 }
 closeBtnPaymentList.forEach(btn => {
     btn.addEventListener('click', () => {hidePayment()})
