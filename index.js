@@ -285,3 +285,11 @@ function setProgress(int) {
     progressTime.textContent = int;
 }
 
+
+//desktop 
+const desktopScreen = document.getElementById('desktop-screen')
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    desktopScreen.style.display = 'none'
+  } else {
+    desktopScreen.style.display = 'block'
+}
